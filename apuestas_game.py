@@ -34,7 +34,7 @@ def determinar_apuesta_mas_confiable(prob_local, cuota_local, prob_visitante, cu
         "Empate": valor_esperado_empate
     }
 
-    apuesta_mas_confiable = max(apuestas, key=apuestas.get)
+    apuesta_mas_confiable = min(apuestas, key=apuestas.get)
     valor_mas_confiable = apuestas[apuesta_mas_confiable]
 
     return apuesta_mas_confiable, valor_mas_confiable
